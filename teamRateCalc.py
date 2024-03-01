@@ -1,3 +1,7 @@
+# Prints teamrating for a bunch of users
+# Usage : python3 teamRateCalc.py {list of handle}
+# for eg. : python3 teamRateCalc.py Blitztage Nisanth Teja-Smart
+
 import math
 import sys
 
