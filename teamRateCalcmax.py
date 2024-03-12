@@ -1,6 +1,6 @@
-# Prints teamrating for a bunch of users
+# Prints teamrating for a bunch of users using their max ratings
 # Usage : python3 teamRateCalc.py {list of handles}
-# for eg. : python3 teamRateCalc.py Blitztage Nisanth Teja-Smart
+# for eg. : python3 teamRateCalcmax.py Blitztage Nisanth Teja-Smart
 
 import math
 import sys
@@ -45,5 +45,8 @@ for person in team:
     if len(response) == 0:
         ratings.append(0)
     else:
-        ratings.append(response[-1]["newRating"])
+        best = 0
+        for indiv in response:
+             best = max(best, indiv["newRating"])
+        ratings.append(best)
 print(teamrate(ratings))
